@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-
+from typing import Tuple
 import math
 
 
@@ -21,7 +21,7 @@ def to_radians(angle_degs: float, angle_mins: float, angle_secs: float) -> float
     return math.radians(angle_degs + (angle_mins + angle_secs / 60) / 60)
 
 
-def to_degrees(angle_rads: float) -> tuple[float, float, float]:
+def to_degrees(angle_rads: float) -> Tuple[float, float, float]:
     decimal_degrees = math.degrees(angle_rads)
     minutes = (decimal_degrees % 1) * 60
     seconds = (minutes % 1) * 60
